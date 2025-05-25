@@ -4,7 +4,10 @@
 #include <iomanip>
 #include <stack>
 #include <set>
+#include <fstream>
 using namespace std;
+
+
 
 class ErdosRenyiGraph {
     private:
@@ -22,6 +25,19 @@ class ErdosRenyiGraph {
         adjacencyMatrix.resize(n, std::vector<bool>(n,false));
         generateGraph();
     }
+
+    void exportEdgeList(const std::string& filename) {
+        std::ofstream file(filename);
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
+                if (adjacencyMatrix[i][j] == 1) {
+                    file << i << " " << j << "\n";
+                }
+            }
+        }
+        file.close();
+    }
+
     void clearGraph() {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
@@ -186,6 +202,8 @@ int main() {
     smallGraph.printAdjacencyMatrix();
     smallGraph.printStatistics();
     smallGraph.printEdges();
+    smallGraph.exportEdgeList("graph_edges.txt");
+    system("\"/Users/benholland/Desktop/MISC/learning c++/week 1/.venv/bin/python\" draw_graph.py");
 
     return 0;
 }
