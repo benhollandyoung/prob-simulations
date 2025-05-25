@@ -1,25 +1,29 @@
-# Erdos-Renyi Graph Generator
+# Erdos-Renyi Graph Generator and Visualizer
 
-This project implements an **Erdős–Rényi random graph** generator in C++ using the \( G(n, p) \) model. It generates undirected graphs with a given number of vertices and edge probability, and provides tools for printing the graph, computing statistics, and checking connectivity between vertices using **depth-first search (DFS)**.
+This project implements an **Erdős–Rényi random graph** generator in C++ using the \( G(n, p) \) model, and automatically visualizes the generated graph using a **Python script** with `matplotlib` and `networkx`.
 
 ---
 
 ## 📦 Features
 
-- Generate a random undirected graph using the G(n, p) model
-- Print the adjacency matrix and edge list
-- Compute basic statistics:
-  - Total number of edges
-  - Average degree
-  - Expected edges and degree
-  - Graph density
-- Check if two nodes are in the same connected component using stack-based DFS
+- Generate a random undirected graph with `n` vertices and edge probability `p`
+- Export graph as an edge list
+- Compute and display:
+  - Adjacency matrix
+  - Edge list
+  - Graph statistics (edges, degrees, density, etc.)
+- **Automatically run a Python script to visualize the graph**
+
 
 ---
 
-## 🛠️ Build Instructions
+## 🛠️ Requirements
 
-You need a C++ compiler that supports C++11 or higher. To compile using `clang++`:
+- C++ compiler (Clang or GCC)
+- Python 3 (with `venv`, `matplotlib`, and `networkx`)
+- Unix-like OS (macOS/Linux recommended) or Windows with path adjustments
 
-```bash
-clang++ -std=c++11 ErdosRenyiGraph.cpp -o main
+---
+
+## 📂 Project Structure
+
