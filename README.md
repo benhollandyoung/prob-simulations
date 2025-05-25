@@ -1,6 +1,6 @@
 # Erdos-Renyi Graph Generator and Visualizer
 
-This project implements an **Erdős–Rényi random graph** generator in C++ using the \( G(n, p) \) model, and automatically visualizes the generated graph using a **Python script** with `matplotlib` and `networkx`.
+This project implements an **Erdős–Rényi random graph** generator in C++ using the \( G(n, p) \) model, and automatically visualises the generated graph using a **Python script** with `matplotlib` and `networkx`.
 
 ---
 
@@ -12,7 +12,7 @@ This project implements an **Erdős–Rényi random graph** generator in C++ usi
   - Adjacency matrix
   - Edge list
   - Graph statistics (edges, degrees, density, etc.)
-- **Automatically run a Python script to visualize the graph**
+- **Automatically run a Python script to visualise the graph**
 
 
 ---
