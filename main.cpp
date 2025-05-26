@@ -1,12 +1,28 @@
+
+
+
 #include <iostream>
+#include "ErdosRenyiGraph.h"
 
 int main() {
+    std::cout << "Erdos-Renyi Graph Simulation\n";
 
-    int x1, x2, x3;
+    int n;
+    std::cout << "How many vertices? \n";
+    std::cin >> n;
 
-    std::cin >> x1;
-    std::cin >> x2;
-    std::cin >> x3;
-    std::cout << x1 + x2 + x3 << "\n";
+    double p;
+    std::cout << "What is edge probability?? \n";
+    std::cin >> p;
+
+
+    ErdosRenyiGraph graph(n, p);
+    graph.printAdjacencyMatrix();
+    graph.printStatistics();
+    graph.printEdges();
+    graph.exportEdgeList("graph_edges.txt");
+    system("\"/Users/benholland/Desktop/MISC/learning c++/week 1/.venv/bin/python\" draw_graph.py");
+
     return 0;
 }
+
