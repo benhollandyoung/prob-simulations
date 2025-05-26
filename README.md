@@ -8,8 +8,8 @@ Simulates bond percolation on an _n × n_ grid. Edges between neighboring grid p
 ### 🔷 Erdős–Rényi Graph
 Generates a random graph with `n` nodes where each possible edge is added independently with probability `p`, following the Erdős–Rényi (G(n, p)) model.
 
-### 🔍 Visualization
-Each simulation outputs its edge list to a CSV or text file. A Python script using `matplotlib` is provided to visualize the resulting graph.
+### 🔍 Visualisation
+Each simulation outputs its edge list to a CSV or text file. A Python script using `matplotlib` is provided to visualise the resulting graph.
 
 ### 💻 Requirements
 - C++17-compatible compiler (e.g. `g++`, `clang++`)
